@@ -5,9 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-<body>
+<body><script >
+        jQuery(function(){
+            $('.con').click(function(){
+                alert("działania jquery");
+            });
+        });
+        $(document).ready(function(){
+            $("#przycisk2").click(function(){
+                alert("działania jquery");
+            })
+        });
+        $(function(){
+            $("#przycisk3").click(function(){
+                alert("działania jquery");
+            })
+        })
+    </script>
+    <div class="con">SPrawdz</div>
+    <div class="przycisk2" >przyciskw</div>
+    <div class="przycisk3"></div>
     
 </body>
 </html>
