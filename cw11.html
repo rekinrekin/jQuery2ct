@@ -119,15 +119,36 @@ div{
         });
 
         $("#plus").click(function(){
-            var a = $("#jeden");
-            var b = $("#dwa") ;
+            var a = parseInt( $("#jeden").val() );
+            var b =parseInt( $("#dwa").val() );
             var c = a+b;
             $("#wynik").text(c);
         });
 
-
-
-
+        $(".plus").click(function(){
+            var a = parseInt( $("#jeden").val() );
+            var b =parseInt( $("#dwa").val() );
+                var c = a+b;
+                    $(".wynik").text(c);
+        });
+        $(".minus").click(function(){
+            var a = parseInt( $("#jeden").val() );
+            var b =parseInt( $("#dwa").val() );  
+                var c = a-b;
+                    $(".wynik").text(c);
+        });
+        $(".pomnoz").click(function(){
+            var a = parseInt( $("#jeden").val() );
+            var b =parseInt( $("#dwa").val() );
+                var c = a*b;
+                    $(".wynik").text(c);
+        });
+        $(".dzielenie").click(function(){
+            var a = parseInt( $("#jeden").val() );
+            var b =parseInt( $("#dwa").val() );
+                var c = a/b;
+                    $(".wynik").text(c);
+        });
 
         });
    
@@ -135,14 +156,7 @@ div{
     </script>
 </head>
 <body>
-    <script>
-        $(".plus").click(function(){
-            var a = $(".jeden");
-        var b = $(".dwa") ;
-        var c = a+b;
-            $(".wynik").text(c);
-        });
-    </script>
+  
     <div id="conteiner">
         <h1>Dodawanie do listy elementów</h1>
         <input type="text" placeholder="nowy punkt listy"/>
