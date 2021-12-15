@@ -45,10 +45,18 @@ div{
     background-color: cyan;
     
 }
+        #div1{width:60px;height: 60px;display:none;background-color:brown;}
+        #div2{width:60px;height: 60px;display:none;background-color:blue;}
+        #div3{width:60px;height: 60px;display:none;background-color:aqua;}
+        #div4{width:60px;height: 60px;display:none;background-color:goldenrod;}
+        #div5{width:60px;height: 60px;display:none;background-color:rgba(219, 106, 13, 0.623)}
+        #div6{width:60px;height: 60px;display:none;background-color:rgb(20, 151, 53);}
+        #div7{width:60px;height: 60px;display:none;background-color:rgb(76, 9, 21);}
+        #div8{width:60px;height: 60px;display:none;background-color:rgb(188, 219, 49);}
     </style>
     <script type="text/javascript">
         $(function(){
-            var stat= 1;
+            var stat= 2;
             $("#dodaj").on("click",function(){
                 if(stat ==1){
                     stat++
@@ -89,13 +97,52 @@ div{
                 } 
                 }
             });
+           
+            $("#tak").click(function(){
+                $('#div1').fadeIn();
+                $('#div2').fadeIn("slow");
+                $('#div3').fadeIn("2000");
+                $('#div4').fadeIn("3000");
+                $('#div5').fadeIn("4000");
+                $('#div6').fadeIn("5000");
+                $('#div7').fadeIn("6000");
+                $('#div8').fadeIn("7000");
+                $('#div1').fadeOut();
+                $('#div2').fadeOut("slow");
+                $('#div3').fadeOut("2000");
+                $('#div4').fadeOut("3000");
+                $('#div5').fadeOut("4000");
+                $('#div6').fadeOut("5000");
+                $('#div7').fadeOut("6000");
+                $('#div8').fadeOut("7000");
+           
         });
-    </script>
-    <script>
 
+        $("#plus").click(function(){
+            var a = $("#jeden");
+            var b = $("#dwa") ;
+            var c = a+b;
+            $("#wynik").text(c);
+        });
+
+
+
+
+
+        });
+   
+        
     </script>
 </head>
 <body>
+    <script>
+        $(".plus").click(function(){
+            var a = $(".jeden");
+        var b = $(".dwa") ;
+        var c = a+b;
+            $(".wynik").text(c);
+        });
+    </script>
     <div id="conteiner">
         <h1>Dodawanie do listy elementów</h1>
         <input type="text" placeholder="nowy punkt listy"/>
@@ -104,11 +151,25 @@ div{
     
         </ol>
     </div>
+    <button id="tak">Kliknij mnie by ukazac animacjie</button>
     <div id="conteiner1">
-<div id="kwadrat"></div>
+        <div id="div1"></div>
+        <div id="div2"></div>
+        <div id="div3"></div>
+        <div id="div4"></div>
+        <div id="div5"></div>
+        <div id="div6"></div>
+        <div id="div7"></div>
+        <div id="div8"></div>
     </div>
     <div id="conteiner2">
-
+        <input id="jeden" placeholder="wpisz wartosc"/>
+        <input id="dwa" placeholder="wpisz wartosc"/>
+        <button id="plus">+</button>
+        <button id="minus">-</button>
+        <button id="pomnoz">*</button>
+        <button id="dzielenie">%</button>
+        <div id="wynik"></div>
     </div>
 </body>
 </html>
