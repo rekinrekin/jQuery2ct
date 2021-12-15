@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Zadanie</title>
+    <style>
+html, body {
+    padding:0;
+    margin:0;
+}
+div{
+    border:solid 1px red;
+}
+#conteiner{
+    min-height:100%;
+    min-width:50%;
+    max-height:100%;
+    max-width:50%;
+    display:block;
+    flex:left;
+}
+#conteiner1{
+    min-height:50%;
+    min-width:50%;
+    height:500px;
+    width:500px;
+    display:block;
+    flex: right;
+}
+#conteiner2{
+    min-height:50%;
+    min-width:50%;
+    height:400px;
+    width:400%;
+    display:block;
+    flex: right;
+}
+#kwadrat{
+    width:80px;
+    height:80px;
+    background-attachment: fixed;
+    background-color: cyan;
+    
+}
+    </style>
+    <script type="text/javascript">
+        $(function(){
+            var stat= 1;
+            $("#dodaj").on("click",function(){
+                if(stat ==1){
+                    stat++
+                var val = $("input").val();
+                if(val !=""){
+                    var element = $("<li></li>").text(val);
+                    $(element).append("<button style='background-color:yellow;' class='mojaklasa'>X</button>");
+                    $("#mojalista").append(element);
+                    $("input").val("");
+                    $(".mojaklasa").on("click",function(){
+                        $(this).parent().remove();
+                    });
+                }
+                }else if(stat == 2){
+                    stat++
+                var val = $("input").val();
+                if(val !=""){
+                    var element = $("<li></li>").text(val);
+                    $(element).append("<button style='background-color:red;' class='mojaklasa'>X</button>");
+                    $("#mojalista").append(element);
+                    $("input").val("");
+                    $(".mojaklasa").on("click",function(){
+                        $(this).parent().remove();
+                    });
+                }
+                }else{
+                    stat--
+                    stat--
+                var val = $("input").val();
+                if(val !=""){
+                    var element = $("<li></li>").text(val);
+                    $(element).append("<button style='background-color:cyan;' class='mojaklasa'>X</button>");
+                    $("#mojalista").append(element);
+                    $("input").val("");
+                    $(".mojaklasa").on("click",function(){
+                        $(this).parent().remove();
+                    });
+                } 
+                }
+            });
+        });
+    </script>
+    <script>
+
+    </script>
+</head>
+<body>
+    <div id="conteiner">
+        <h1>Dodawanie do listy elementów</h1>
+        <input type="text" placeholder="nowy punkt listy"/>
+        <button id="dodaj">Dodaj</button>
+        <ol id="mojalista">
+    
+        </ol>
+    </div>
+    <div id="conteiner1">
+<div id="kwadrat"></div>
+    </div>
+    <div id="conteiner2">
+
+    </div>
+</body>
+</html>
